@@ -1,30 +1,46 @@
-numpy==1.16.2
-scipy==1.2.3
-scikit-learn==0.23.2
-
-nltk==3.4
-fuzzywuzzy==0.18.0
-python-Levenshtein==0.12.0
-
-rdflib==5.0.0
-iribaker==0.2
-SPARQLWrapper==1.8.5
-
-pyobjc==6.2.2
-webrtcvad==2.0.10
-
+# Voice Recognition/Generation
 google-cloud-speech==2.0.1
 google-cloud-texttospeech==2.2.0
 google-cloud-translate==3.0.1
+webrtcvad==2.0.10
 
-Pillow==5.4.1
+# NLP
+nltk==3.4
+python-Levenshtein==0.12.0
+
+# Numerics
+scikit-learn==0.23.2
+scipy==1.5.3
+numpy==1.16.2
+
+# Audio/Video
+PyAudio==0.2.11
+Pillow==8.0.1
 opencv-python==4.4.0.46
 
-tornado==5.1.1
-typing==3.7.4.3
-PyAudio==0.2.11
+# RDF support
+iribaker==0.2
+rdflib==5.0.0
+SPARQLWrapper==1.8.5
 
+# Utils
+fuzzywuzzy==0.18.0
 pycountry==20.7.3
 reverse-geocoder==1.5.1
 
+# OS X
+pyobjc==6.2.2
+
+# Python
+typing==3.7.4.3
 mock==4.0.2
+
+# REST/JSON/Messaging support
+Flask==1.1.2
+tornado==5.1.1
+connexion==2.7.0
+marshmallow==3.9.1
+marshmallow-dataclass==8.3.0
+apispec[yaml]==4.0.0
+asyncapi==0.4.0
+PyYAML==5.3.1

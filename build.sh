@@ -1,14 +1,9 @@
 #!/bin/bash
 
+set -e
+
 # Remove existing index and download folder
-rm -rf downloads
-rm -rf leolani
+rm -rf mirror
 
 # Prepare packages from PyPI and component dists
-pypi-mirror download -d downloads -r requirements.txt
-cp dists/* downloads
-
-# Create the index
-pypi-mirror create -d downloads -m leolani
-
-rm -rf downloads
+pypi-mirror download --binary --download-dir mirror --requirement requirements.txt

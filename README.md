@@ -28,7 +28,15 @@ This will download the packages specified in the `requirements.txt` and  build a
 
 In your project install packages from the local index either by specifying it in the `pip` command:
 
-    > pip install -f /path/to/cltl-requirements/leolani -r requirements.txt
+    > pip install --no-index -f /path/to/cltl-requirements/mirror -f /path/to/cltl-requirements/leolani -r requirements.txt
+
+or include
+
+    --no-index
+    --find-links=/path/to/cltl-requirements/mirror
+    --find-links /path/to/cltl-requirements/leolani
+
+at the start of the *requirements.txt* file of your project.
 
 ### Publish Leolani components to the local package index
 

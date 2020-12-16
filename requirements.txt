@@ -11,7 +11,7 @@ python-Levenshtein==0.12.0
 # Numerics
 scikit-learn==0.23.2
 scipy==1.5.3
-numpy==1.16.2
+numpy==1.17.3
 
 # Audio/Video
 PyAudio==0.2.11
@@ -42,5 +42,9 @@ connexion==2.7.0
 marshmallow==3.9.1
 marshmallow-dataclass==8.3.0
 apispec[yaml]==4.0.0
-asyncapi==0.4.0
+asyncapi==0.14.0
 PyYAML==5.3.1
+typer==0.3.2
+uvicorn==0.13.1
+apidaora==0.28.0
+markdown==3.3.3

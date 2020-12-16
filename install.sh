@@ -3,4 +3,5 @@
 python -m venv venv
 source venv/bin/activate
 
-pip install pypi-mirror
+pip install --upgrade pip
+pip install python-pypi-mirror

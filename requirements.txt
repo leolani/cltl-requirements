@@ -11,12 +11,13 @@ python-Levenshtein==0.12.0
 # Numerics
 scikit-learn==0.23.2
 scipy==1.5.3
-numpy==1.17.3
+numpy==1.19.5
 
 # Audio/Video
 PyAudio==0.2.11
 Pillow==8.0.1
 opencv-python==4.4.0.46
+pyobjc==6.2.2; sys_platform == 'darwin'
 
 # RDF support
 iribaker==0.2
@@ -27,13 +28,6 @@ SPARQLWrapper==1.8.5
 fuzzywuzzy==0.18.0
 pycountry==20.7.3
 reverse-geocoder==1.5.1
-
-# OS X
-pyobjc==6.2.2
-
-# Python
-typing==3.7.4.3
-mock==4.0.2
 
 # REST/JSON/Messaging support
 Flask==1.1.2
@@ -48,3 +42,4 @@ typer==0.3.2
 uvicorn==0.13.1
 apidaora==0.28.0
 markdown==3.3.3
+kombu==5.0.2

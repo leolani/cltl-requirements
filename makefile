@@ -1,6 +1,6 @@
 SHELL = /bin/bash
 
-project_root ?= $(realpath ..)
+project_root = $(realpath ..)
 project_name = $(notdir $(realpath .))
 project_version = $(shell cat version.txt)
 

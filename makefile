@@ -16,7 +16,8 @@ depend:
 .PHONY: clean
 clean:
 	$(info Clean $(project_name))
-	@rm -rf mirror requirements.lock
+	@rm -rf leolani mirror requirements.lock
+	mkdir leolani mirror
 
 .PHONY: install
 install: $(mirror)

@@ -1,5 +1,6 @@
 mirror/
 requirements.lock
+docker.lock
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

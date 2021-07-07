@@ -4,28 +4,39 @@ project_root = $(realpath ..)
 project_name = $(notdir $(realpath .))
 project_version = $(shell cat version.txt)
 
-mirror := requirements.lock
+# We use this makefile from tests
+makefile_dir := $(dir $(lastword $(MAKEFILE_LIST)))
+include $(makefile_dir)util/make/makefile.base.mk
 
-depend:
-	touch makefile.d
+
+mirror := mirror
+mirror_lock := requirements.lock
+artifacts := leolani
 
 
-.DEFAULT_GOAL := install
+.DEFAULT_GOAL := build
 
 
 .PHONY: clean
 clean:
 	$(info Clean $(project_name))
-	@rm -rf leolani mirror requirements.lock
-	mkdir leolani mirror
+	@rm -rf $(mirror) $(mirror_lock) $(artifacts) docker.lock
+	@mkdir $(mirror) $(artifacts)
 
-.PHONY: install
-install: $(mirror)
-
-$(mirror): requirements.txt
+$(mirror_lock): requirements.txt
 	pip download --requirement requirements.txt -d mirror \
-		| grep Collecting | cut -f 2 -d ' ' > requirements.lock
+		| grep Collecting | cut -f 2 -d ' ' > $(mirror_lock)
+
+.PHONY:
+build: $(mirror_lock) $(artifacts)
+
+$(artifacts):
+	mkdir -p $(artifacts)
+
 
 .PHONY: docker
-docker: $(mirror)
+docker: docker.lock
+
+docker.lock: $(mirror_lock) $(artifacts)
 	DOCKER_BUILDKIT=1 docker build -t cltl/${project_name}:${project_version} .
+	touch docker.lock

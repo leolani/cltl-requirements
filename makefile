@@ -7,6 +7,7 @@ project_version = $(shell cat version.txt)
 # We use this makefile from tests
 makefile_dir := $(dir $(lastword $(MAKEFILE_LIST)))
 include $(makefile_dir)util/make/makefile.base.mk
+include $(makefile_dir)util/make/makefile.git.mk
 
 
 mirror := mirror
@@ -34,6 +35,8 @@ build: $(mirror_lock) $(artifacts)
 $(artifacts):
 	@mkdir -p $(artifacts)
 
+
+install: docker
 
 .PHONY: docker
 docker: docker.lock

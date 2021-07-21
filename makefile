@@ -26,7 +26,8 @@ clean:
 
 $(mirror_lock): requirements.txt
 	$(info Download to mirror)
-	@pip download --requirement requirements.txt -d mirror \
+	@pip install wheel; \
+	pip download --requirement requirements.txt -d mirror \
 		| grep Collecting | cut -f 2 -d ' ' > $(mirror_lock)
 
 .PHONY:

@@ -2,7 +2,7 @@ SHELL = /bin/bash
 
 project_root = $(realpath ..)
 project_name = $(notdir $(realpath .))
-project_version = $(shell cat version.txt)
+project_version = $(shell cat VERSION)
 
 # We use this makefile from tests
 makefile_dir := $(dir $(lastword $(MAKEFILE_LIST)))
@@ -26,9 +26,10 @@ clean:
 
 $(mirror_lock): requirements.txt
 	$(info Download to mirror)
-	@pip install wheel; \
+	@pip install --upgrade pip; \
+	pip install wheel; \
 	pip download --requirement requirements.txt -d mirror \
-		| grep Collecting | cut -f 2 -d ' ' > $(mirror_lock)
+		| tee $(shell tty) | grep Collecting | cut -f 2 -d ' ' > $(mirror_lock)
 
 .PHONY:
 build: $(mirror_lock) $(artifacts)

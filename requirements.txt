@@ -7,7 +7,7 @@ webrtcvad==2.0.10
 # NLP
 nltk==3.4
 python-Levenshtein==0.12.0
-# emissor==0.0.dev3
+emissor==0.0.dev4
 
 # NN
 transformers==4.10.0
@@ -18,7 +18,7 @@ jiwer==2.2.0
 # Numerics
 scikit-learn==0.23.2
 scipy==1.5.3
-numpy==1.19.5
+numpy==1.21.2
 
 # Audio/Video
 clang==11.0

@@ -25,7 +25,7 @@ clean:
 	@mkdir $(mirror) $(artifacts)
 
 $(mirror_lock): requirements.txt
-	$(info Download to mirror)
+	$(info Download to mirror: $(shell python --version))
 	@pip install --upgrade pip; \
 	pip install wheel; \
 	pip download --requirement requirements.txt -d mirror \

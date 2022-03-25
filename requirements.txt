@@ -45,6 +45,7 @@ reverse-geocoder==1.5.1
 # REST/JSON/Messaging support
 Flask==1.1.2
 tornado==5.1.1
+jinja2==3.0.3
 connexion==2.7.0
 marshmallow==3.13.0
 marshmallow-dataclass==8.4.1

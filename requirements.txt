@@ -34,8 +34,7 @@ speechbrain==0.5.10
 
 # RDF support
 iribaker==0.2
-rdflib==5.0.0
-rdflib-jsonld==0.6.2
+rdflib==6.1.1
 SPARQLWrapper==1.8.5
 
 # Utils
@@ -53,6 +52,8 @@ connexion==2.7.0
 marshmallow==3.13.0
 marshmallow-dataclass==8.4.1
 marshmallow-enum==1.5.1
+marshmallow-union==0.1.15.post1
+typeguard==2.13.3
 apispec[yaml]==4.0.0
 asyncapi==0.14.0
 PyYAML==5.3.1

@@ -22,8 +22,8 @@ jiwer==2.2.0
 # Numerics
 scikit-learn==1.0.2
 scipy==1.8.0
-numpy==1.22.2
-matplotlib==3.4.0
+numpy==1.24.2
+matplotlib==3.7.1
 
 # Audio/Video
 clang==11.0

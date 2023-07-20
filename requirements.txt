@@ -11,6 +11,7 @@ python-Levenshtein==0.12.0
 simplenlg==0.2.0
 stanford_openie==1.3.0
 spacy==3.2.6
+stanza==1.5.0
 
 # NN
 transformers==4.10.0

@@ -78,6 +78,7 @@ tqdm==4.62.3
 
 # Docker
 python_on_whales==0.41.0
+pydantic==1.10.12
 
 # Others
 jellyfish==0.9.0

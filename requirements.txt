@@ -14,9 +14,11 @@ spacy==3.6.1
 stanza==1.5.0
 
 # NN
-transformers==4.10.0
-torch==1.12.1
-torchvision==0.13.1
+transformers==4.16.0
+tokenizers==0.11.6
+torch==1.13.1
+#torchvision 14.x is the last compatible with torch 1.x
+torchvision==0.14.1
 cffi==1.14.6
 jiwer==2.2.0
 
@@ -28,7 +30,7 @@ matplotlib==3.7.1
 
 # Audio/Video
 clang==11.0
-PyAudio==0.2.11
+PyAudio==0.2.13
 Pillow==8.0.1
 opencv-python==4.8.0.76
 pyobjc==9.2;sys_platform=='darwin'
@@ -87,3 +89,4 @@ jellyfish==0.9.0
 wheel==0.40.0
 setuptools-rust==1.7.0
 
+setuptools==65.1.1

@@ -14,11 +14,12 @@ spacy==3.6.1
 stanza==1.5.0
 
 # NN
-transformers==4.16.0
-tokenizers==0.11.6
-torch==1.13.1
+transformers==4.37.2
+sentence_transformers==2.3.1
+torch==2.2.0
+gensim==4.3.2
+thefuzz==0.22.1
 #torchvision 14.x is the last compatible with torch 1.x
-torchvision==0.14.1
 cffi==1.14.6
 jiwer==2.2.0
 

@@ -38,6 +38,7 @@ pyobjc==9.2;sys_platform=='darwin'
 sounddevice==0.4.6
 soundfile==0.12.1
 speechbrain==0.5.10
+openai==1.14.0
 
 # RDF support
 iribaker==0.2

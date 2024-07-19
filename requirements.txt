@@ -68,7 +68,7 @@ apispec[yaml]==4.0.0
 asyncapi==0.14.0
 PyYAML==5.3.1
 typer==0.3.2
-uvicorn==0.13.1
+uvicorn==0.30.1
 apidaora==0.28.0
 markdown==3.3.3
 kombu==5.0.2

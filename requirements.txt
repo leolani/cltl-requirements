@@ -22,6 +22,10 @@ torchvision==0.14.1
 cffi==1.14.6
 jiwer==2.2.0
 
+## LLM
+ollama==0.3.3
+langchain-ollama==0.2.0
+
 # Numerics
 scikit-learn==1.0.2
 scipy==1.8.0
